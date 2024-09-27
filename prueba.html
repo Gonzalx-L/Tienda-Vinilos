@@ -1,0 +1,122 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Inverso Horizontal</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      .section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        text-align: center;
+        transform: translateX(100vw);
+      }
+
+      img {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section" id="section1">
+      <div class="container">
+        <h1>Primera Imagen y Texto</h1>
+        <img src="https://via.placeholder.com/600x300" alt="Imagen 1" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
+
+    <section class="section" id="section2">
+      <div class="container">
+        <h1>Segundo Texto</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          fermentum libero sit amet metus tempus, non luctus magna aliquet.
+        </p>
+      </div>
+    </section>
+    <h2>hola</h2>
+
+    <section class="section" id="section3">
+      <div class="container">
+        <h1>Tercer Texto</h1>
+        <p>
+          Curabitur ut arcu eu lorem tristique vestibulum. Phasellus sit amet
+          lectus sit amet lacus vulputate dictum.
+        </p>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Primer movimiento horizontal
+      gsap.to("#section1 .container", {
+        x: "-100vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section1",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          markers: true,
+        },
+      });
+
+      // Segundo movimiento: aparece el segundo texto
+      gsap.to("#section2 .container", {
+        x: "-100vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section2",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          markers: true,
+        },
+      });
+
+      // Tercer movimiento: aparece el tercer texto
+      gsap.to("#section3 .container", {
+        x: "-100vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section3",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          markers: true,
+        },
+      });
+    </script>
+  </body>
+</html>
