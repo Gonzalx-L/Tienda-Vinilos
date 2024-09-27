@@ -1,0 +1,204 @@
+/** @format */
+
+/* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Playwrite+DE+Grund:wght@100..400&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d5d8dc;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: large;
+}
+
+li {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: large;
+}
+
+/* Estilos de la navbar */
+.navbar {
+  background-color: black;
+  height: 50px;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffcd00;
+}
+
+.bi {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.bi:hover {
+  color: #ffcd00;
+}
+
+.navbar-nav {
+  gap: 15px;
+  margin-right: 30px;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 15px;
+  gap: 15px;
+}
+
+.navbar-collapse {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* position: absolute; */
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+/*aquie esta el primer contenedodr*/
+
+.contenedor_carrusel {
+  width: 100%;
+  /* max-width: 1000px; */
+  height: 450px;
+  background: #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+  /* margin: 50px auto; */
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+
+.diapositiva {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.elemento {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.diapositiva .elemento:nth-child(1),
+.diapositiva .elemento:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.diapositiva .elemento:nth-child(3) {
+  left: 50%;
+}
+.diapositiva .elemento:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.diapositiva .elemento:nth-child(5) {
+  left: calc(50% + 440px);
+}
+.diapositiva .elemento:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.elemento .contenido {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+.diapositiva .elemento:nth-child(2) .contenido {
+  display: block;
+}
+
+.contenido .nombre {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animar 1s ease-in-out 1 forwards;
+}
+
+.contenido .descripcion {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animar 1s ease-in-out 0.3s 1 forwards;
+}
+
+.contenido button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animar 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animar {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+.botones {
+  /* padding-bottom: 10050px; */
+  margin-bottom: 40px;
+  position: relative;
+}
+.botones button {
+  border-radius: 90px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.botones .btn {
+  margin: 10px;
+  /* Espaciado entre los botones */
+}
+
+.botones .btn:hover {
+  background-color: #0056b3; /* Cambia el color al pasar el ratón */
+}
+.conatiner_2 {
+  background-color: red;
+  height: 330px;
+}
