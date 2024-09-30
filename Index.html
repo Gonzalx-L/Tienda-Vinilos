@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./Style/reproductor_musica.css" />
   </head>
   <body>
-    <h1>hola</h1>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
@@ -59,9 +58,7 @@
       </div>
     </nav>
     <!-- contenedor general del cuerpo de la pagina -->
-    <div
-      class="contenedor_general"
-      style="padding-left: 15px; padding-right: 15px">
+    <div class="contenedor_general" style="margin: 1px">
       <!--Primer contenedor -->
       <div class="contenedor_carrusel">
         <div class="diapositiva">
@@ -132,18 +129,27 @@
               <button>See More</button>
             </div>
           </div>
+          <div class="botones text-center my-3">
+            <button
+              class="btn btn-primary"
+              onclick="anterior()"
+              title="Anterior">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button
+              class="btn btn-primary"
+              onclick="siguiente()"
+              title="Siguiente">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="botones text-center my-3">
-        <button class="btn btn-primary" onclick="anterior()" title="Anterior">
-          <i class="bi bi-arrow-left"></i>
-        </button>
-        <button class="btn btn-primary" onclick="siguiente()" title="Siguiente">
-          <i class="bi bi-arrow-right"></i>
-        </button>
       </div>
 
       <div class="conatiner_2">
+        <h2 class="baner_reproductor">
+          Escucha las canciones mas iconicas de los discos mas vendidos
+        </h2>
         <div class="container container-musica">
           <img
             src="./Img/Cancion_1.jpeg"
@@ -152,7 +158,7 @@
             id="coverImage" />
 
           <div class="reproductor-music">
-            <h2 id="songTitle">Nombre de la Canción</h2>
+            <h3 id="songTitle">Aire - Los Cafres</h3>
 
             <div class="progress-bar" id="progress-bar" onclick="seek(event)">
               <div class="progress" id="progress"></div>
