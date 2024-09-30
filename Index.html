@@ -14,189 +14,227 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/1eaec87770.js"
+      crossorigin="anonymous"></script>
 
     <!--Link css-->
     <link rel="stylesheet" href="../Style/nav_inicio.css" />
     <link rel="stylesheet" href="./Style/reproductor_musica.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">RetroGroove</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nosotros</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ms-3">
-            <li class="nav-item me-2">
-              <i class="bi bi-person-circle" title="Iniciar Sesión"></i>
-            </li>
-            <li class="nav-item">
-              <i class="bi bi-cart3" title="Carrito de Compra"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- contenedor general del cuerpo de la pagina -->
-    <div class="contenedor_general" style="margin: 1px">
-      <!--Primer contenedor -->
-      <div class="contenedor_carrusel">
-        <div class="diapositiva">
-          <div
-            class="elemento"
-            style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg)">
-            <div class="contenido">
-              <div class="nombre">Switzerland</div>
-              <div class="descripcion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                eum!
-              </div>
-            </div>
-          </div>
-          <div
-            class="elemento"
-            style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg)">
-            <div class="contenido">
-              <div class="nombre">Finland</div>
-              <div class="descripcion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                eum!
-              </div>
-            </div>
-          </div>
-          <div
-            class="elemento"
-            style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg)">
-            <div class="contenido">
-              <div class="nombre">Iceland</div>
-              <div class="descripcion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                eum!
-              </div>
-            </div>
-          </div>
-          <div
-            class="elemento"
-            style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg)">
-            <div class="contenido">
-              <div class="nombre">Australia</div>
-              <div class="descripcion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                eum!
-              </div>
-            </div>
-          </div>
-          <div
-            class="elemento"
-            style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg)">
-            <div class="contenido">
-              <div class="nombre">Netherland</div>
-              <div class="descripcion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                eum!
-              </div>
-            </div>
-          </div>
-          <div
-            class="elemento"
-            style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg)">
-            <div class="contenido">
-              <div class="nombre">Ireland</div>
-              <div class="descripcion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                eum!
-              </div>
-              <button>See More</button>
-            </div>
-          </div>
-          <div class="botones text-center my-3">
+    <div
+      class="contenedor_body"
+      style="
+        /* display: grid; */
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      ">
+      <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">RetroGroove</a>
             <button
-              class="btn btn-primary"
-              onclick="anterior()"
-              title="Anterior">
-              <i class="bi bi-arrow-left"></i>
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <button
-              class="btn btn-primary"
-              onclick="siguiente()"
-              title="Siguiente">
-              <i class="bi bi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="conatiner_2">
-        <h2 class="baner_reproductor">
-          Escucha las canciones mas iconicas de los discos mas vendidos
-        </h2>
-        <div class="container container-musica">
-          <img
-            src="./Img/Cancion_1.jpeg"
-            alt=""
-            class="img-portada"
-            id="coverImage" />
-
-          <div class="reproductor-music">
-            <h3 id="songTitle">Aire - Los Cafres</h3>
-
-            <div class="progress-bar" id="progress-bar" onclick="seek(event)">
-              <div class="progress" id="progress"></div>
-            </div>
-            <div class="time-display">
-              <span id="currentTime">0:00</span>
-              <span id="totalTime">0:00</span>
-            </div>
-
-            <div class="controls">
-              <i
-                class="bi bi-skip-backward-circle-fill"
-                onclick="previousSong()"></i>
-              <i class="bi bi-rewind-fill" onclick="skipBackward()"></i>
-              <i
-                class="bi bi-play-circle-fill"
-                id="playPauseBtn"
-                onclick="playPause()"></i>
-              <i class="bi bi-fast-forward-fill" onclick="skipForward()"></i>
-              <i
-                class="bi bi-skip-forward-circle-fill"
-                onclick="nextSong()"></i>
-            </div>
-
-            <div class="animacion_de_music" id="animacion_de_music">
-              <i class="bi bi-reception-0"></i>
-              <i class="bi bi-reception-1"></i>
-              <i class="bi bi-reception-2"></i>
-              <i class="bi bi-reception-3"></i>
-              <i class="bi bi-reception-4"></i>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tienda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Nosotros</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ms-3">
+                <li class="nav-item me-2">
+                  <i class="bi bi-person-circle" title="Iniciar Sesión"></i>
+                </li>
+                <li class="nav-item">
+                  <i class="bi bi-cart3" title="Carrito de Compra"></i>
+                </li>
+              </ul>
             </div>
           </div>
+        </nav>
+      </header>
+      <main>
+        <!-- contenedor general del cuerpo de la pagina -->
+        <div class="contenedor_general">
+          <!--Primer contenedor -->
+          <div class="carousel-inner">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselE1"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+              <button
+                type="button"
+                data-bs-target="#carouselE1"
+                data-bs-slide-to="1"
+                class="active"
+                aria-label="Slide 2"></button>
+              <button
+                type="button"
+                data-bs-target="#carouselE1"
+                data-bs-slide-to="2"
+                class="active"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-item active">
+              <img src="../Img/disco1.jpg" class="d-block w-100" alt="" />
+              <div class="carousel-caption">
+                <h5>Los mejores vinilos</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Similique molestias itaque, ipsa doloribus officia, eius non
+                  sed nobis explicabo harum repudiandae, atque quaerat. Ipsam
+                  quidem ad maxime expedita amet quod.
+                </p>
+                <p><a href="#" class="btn btn-dark mt-3">Leer mas</a></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../Img/vinilo.4.jpg" class="d-block w-100" alt="" />
+              <div class="carousel-caption">
+                <h5>Los mejores vinilos</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Similique molestias itaque, ipsa doloribus officia, eius non
+                  sed nobis explicabo harum repudiandae, atque quaerat. Ipsam
+                  quidem ad maxime expedita amet quod.
+                </p>
+                <p><a href="#" class="btn btn-dark mt-3">Leer mas</a></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../Img/disco1.jpg" class="d-block w-100" alt="" />
+              <div class="carousel-caption">
+                <h5>Los mejores vinilos</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Similique molestias itaque, ipsa doloribus officia, eius non
+                  sed nobis explicabo harum repudiandae, atque quaerat. Ipsam
+                  quidem ad maxime expedita amet quod.
+                </p>
+                <p><a href="#" class="btn btn-dark mt-3">Leer mas</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="conatiner_2">
+            <h2 class="baner_reproductor">
+              Escucha las canciones mas iconicas de los discos mas vendidos
+            </h2>
+            <div class="container container-musica">
+              <img
+                src="./Img/Cancion_1.jpeg"
+                alt=""
+                class="img-portada"
+                id="coverImage" />
+
+              <div class="reproductor-music">
+                <h3 id="songTitle">Aire - Los Cafres</h3>
+
+                <div
+                  class="progress-bar"
+                  id="progress-bar"
+                  onclick="seek(event)">
+                  <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-display">
+                  <span id="currentTime">0:00</span>
+                  <span id="totalTime">0:00</span>
+                </div>
+
+                <div class="controls">
+                  <i
+                    class="bi bi-skip-backward-circle-fill"
+                    onclick="previousSong()"></i>
+                  <i class="bi bi-rewind-fill" onclick="skipBackward()"></i>
+                  <i
+                    class="bi bi-play-circle-fill"
+                    id="playPauseBtn"
+                    onclick="playPause()"></i>
+                  <i
+                    class="bi bi-fast-forward-fill"
+                    onclick="skipForward()"></i>
+                  <i
+                    class="bi bi-skip-forward-circle-fill"
+                    onclick="nextSong()"></i>
+                </div>
+
+                <div class="animacion_de_music" id="animacion_de_music">
+                  <i class="bi bi-reception-0"></i>
+                  <i class="bi bi-reception-1"></i>
+                  <i class="bi bi-reception-2"></i>
+                  <i class="bi bi-reception-3"></i>
+                  <i class="bi bi-reception-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <!--novedades-->
+        <div class="cont_3" style="background-color: blue; height: 670px"></div>
+      </main>
+
+      <footer class="pie-pagina">
+        <div class="grupo-1">
+          <div class="box">
+            <figure>
+              <a href="#">
+                <img src="logo_footer.jpeg" alt="logo" />
+              </a>
+            </figure>
+          </div>
+
+          <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At,
+              quaerat?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At,
+              quaerat?
+            </p>
+          </div>
+
+          <div class="box" id="box-red-social">
+            <h2>SIGUENOS Y CONTACTANOS</h2>
+            <div class="red-social">
+              <a href="#" class="fa fa-facebook" id="icon-face"></a>
+              <a href="#" class="fa fa-instagram" id="icon-ig"></a>
+              <a href="#" class="fa-brands fa-x-twitter" id="icon-x"></a>
+              <a href="#" class="fa fa-whatsapp" id="icon-wsp"></a>
+            </div>
+          </div>
+        </div>
+        <div class="grupo-2">
+          <small
+            >&copy;2024 <b>RETROGROOVE</b> - Todos los Derechos
+            Reservados</small
+          >
+        </div>
+      </footer>
     </div>
 
-    <!--novedades-->
-    <!--Footer-->
     <script src="./JS/reproductor_musica.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
