@@ -6,10 +6,22 @@ const songs = [
     image: "./Img/Cancion_1.jpeg",
     title: "Aire - Los Cafres",
   },
-  { src: "song2.mp3", image: "./Img/Cancion_2.jpeg", title: "Canción 2" },
-  { src: "song3.mp3", image: "./Img/Cancion_3.jpeg", title: "Canción 3" },
-  { src: "song4.mp3", image: "./Img/Cancion_4.jpeg", title: "Canción 4" },
-  { src: "song5.mp3", image: "./Img/Cancion_5.jpeg", title: "Canción 5" },
+  {
+    src: "song2.mp3",
+    image: "./Img/Cancion_2.jpeg",
+    title: "Bohemian Rhapsody - Queen",
+  },
+  {
+    src: "song3.mp3",
+    image: "./Img/Cancion_3.jpeg",
+    title: "Feels good- Nina Simone",
+  },
+  {
+    src: "song4.mp3",
+    image: "./Img/Cancion_4.jpeg",
+    title: "Sweet Dreams-Marily Manson",
+  },
+  { src: "song5.mp3", image: "./Img/Cancion_5.jpeg", title: "Hit 'Em Up-2PaC" },
 ];
 
 let currentSongIndex = 0;
@@ -99,7 +111,7 @@ function seek(event) {
   audioPlayer.currentTime = percent * audioPlayer.duration;
 }
 
-//
+// de avanzar 10 segundos
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60)
@@ -108,7 +120,7 @@ function formatTime(seconds) {
   return `${minutes}:${secs}`;
 }
 
-/**/
+/*siguiete cancio´n*/
 function siguiente() {
   let elementos = document.querySelectorAll(".elemento");
   document.querySelector(".diapositiva").appendChild(elementos[0]);

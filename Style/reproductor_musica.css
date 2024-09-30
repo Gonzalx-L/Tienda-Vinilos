@@ -5,9 +5,59 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  /* background-color: #fafafa; */
+  background-color: #4d4d4d;
+  width: 700px;
+  opacity: 80;
   padding: 40px;
   border-radius: 10px;
+}
+.baner_reproductor {
+  font-size: 5vw; /* Tamaño de la fuente en unidades relativas */
+  text-align: center;
+  color: #333;
+  animation: colorChange 4s infinite alternate, moveText 3s ease-in-out infinite; /* Aplicar las animaciones */
+}
+
+/* Animación para cambiar el color del texto */
+@keyframes colorChange {
+  0% {
+    color: #ffcd00;
+  }
+  50% {
+    color: #ff5733;
+  }
+  100% {
+    color: #007bff;
+  }
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries para tamaños específicos */
+@media (max-width: 600px) {
+  .baner_reproductor {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .baner_reproductor {
+    font-size: 7vw;
+  }
+  .img-portada {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .img-portada {
