@@ -7,10 +7,19 @@
 
 /*Contenedor general*/
 .cont-general {
-  grid-template-rows: auto 1fr auto;
-  font-family: "Urbanist", sans-serif;
-  font-size: large;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+    nav{
+      padding: 1rem;
+    }
+    main{
+      padding: 1rem;
+      flex: 1;
+    }
+    footer{
+      padding: 1rem;
+    }
 }
 
 .contenido-producto {

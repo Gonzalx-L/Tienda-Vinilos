@@ -4,24 +4,35 @@
     padding: 0;
     box-sizing: border-box; /* Descomentar si deseas aplicar box-sizing */
 }
-.cont-general{
-  grid-template-rows: auto 1fr auto;
-  font-family: "Urbanist", sans-serif;
-  min-height: 100vh ;
-  font-size: large;
-  overflow-x: hidden;
+/*Contenedor general*/
+.cont-general {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+    nav{
+      padding: 1rem;
+    }
+    main{
+      padding: 1rem;
+      flex: 1;
+    }
+    footer{
+      padding: 1rem;
+    }
 }
 .contenedor{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tienda{
   box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
   margin: 3% 8%;
   padding: 20px 20px;
 }
 /*Main*/
 @media screen and (max-width: 768px) {
-  .contenedor{
+  .tienda{
     margin: 1% 4%;
   }
 }
@@ -33,7 +44,7 @@
 /* Opciones de responsividad específicas para tables */
 @media  screen and (min-width: 768px) and (max-width: 1400px) {
   .cont-general {
-      min-height: 90vh ;
+      min-height: 100vh ;
   }
 }
 /*historial y buscar*/
