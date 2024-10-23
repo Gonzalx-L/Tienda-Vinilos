@@ -1,0 +1,167 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Descomentar si deseas aplicar box-sizing */
+}
+/*Contenedor general*/
+.cont-general {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+    nav{
+      padding: auto;
+    }
+    main{
+      padding: 1rem;
+      flex: 1;
+    }
+    footer{
+      padding: 1rem;
+    }
+}
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tienda{
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+  margin: 3% 8%;
+  padding: 20px 20px;
+}
+/*Main*/
+@media screen and (max-width: 768px) {
+  .tienda{
+    margin: 1% 4%;
+  }
+}
+@media  screen and (min-width: 1980px) {
+  .tienda{
+    max-width: 1500px ;
+  }
+}
+/* Opciones de responsividad específicas para tables */
+@media  screen and (min-width: 768px) and (max-width: 1400px) {
+  .cont-general {
+      min-height: 100vh ;
+  }
+}
+/*historial y buscar*/
+.pri1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-buscar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.form-buscar input[type="text"] {
+  padding: 7px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-buscar input[type="text"]:focus {
+  border-color: black
+}
+
+.form-buscar input[type="button"] {
+  padding: 7px 20px;
+  font-size: 16px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-buscar input[type="button"]:hover {
+  transform: translateY(-2px)
+}
+@media  screen and (max-width: 550px) {
+  .pri1{
+    display: block;
+    margin: 5px 0px ;
+  }
+}
+/*Filtros*/
+#cajon-filtros{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.accordion-button {
+  border: 1px solid;
+}
+.btnfiltro{
+  padding: 7px 20px;
+  font-size: 16px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btnfiltro:hover{
+  background-color: black;
+  border: 1px solid black;
+}
+/*cards*/
+.rowac{
+  text-decoration: none;
+  color: inherit;
+}
+.card{
+  width: 100%;
+  height: 100%; 
+}
+.col-card{
+  margin-bottom: 18px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido dentro de la tarjeta esté distribuido de manera uniforme */
+}
+.card-body p{
+  font-weight: bold;
+  color: red;
+}
+.add-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: #ffcd00;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border: none
+}
+.add-btn i{
+  color: black;
+  font-weight: bold;
+}
+.card:hover .add-btn {
+  opacity: 1;
+  background-color: #ffcd00;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border: none
+}
+/*Cursor para dispositivos y moviles, mostrar el boton*/
+@media (hover: none) and (pointer: coarse) {
+  .add-btn {
+    opacity: 1; /* Muestra el botón en dispositivos táctiles */
+  }
+}
