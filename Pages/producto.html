@@ -1,5 +1,4 @@
 <!-- @format -->
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,50 +31,6 @@
           <a class="navbar-brand" href="../Index.html">RetroGroove</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-=======
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tienda</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
-    <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/1eaec87770.js"
-      crossorigin="anonymous"></script>
-
-    <!--Link css-->
-    <link rel="stylesheet" href="../Style/nav_inicio.css" />
-    <link rel="stylesheet" href="./Style/reproductor_musica.css" />
-
-    <link rel="stylesheet" href="../Style/Producto.css" />
-    <title>Inicio</title>
-    <script src="../js/tienda-logica.js"></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./Index.html">RetroGroove</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
->>>>>>> 33282f758f2cb86144a9f747cb666a0e69c27198
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -84,8 +39,7 @@
                 <a class="nav-link" href="../Index.html">Inicio</a>
               </li>
               <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link" href="../Pages/tienda.html">Tienda</a>
+                <a class="nav-link" href="./Pages/tienda.html">Tienda</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="">Noticias</a>
@@ -99,29 +53,12 @@
                 <a class="nav-link" href="">
                   <i class="bi bi-cart3 bi-nav" title="Carrito de Compra"></i>
                 </a>
-=======
-                <a class="nav-link" href="./tienda.html">Tienda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ms-3">
-              <li class="nav-item me-2">
-                <a href="../Pages/login.html">
-                  <i class="bi bi-person-circle" title="Iniciar Sesión"> </i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <i class="bi bi-cart3" title="Carrito de Compra"></i>
->>>>>>> 33282f758f2cb86144a9f747cb666a0e69c27198
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-<<<<<<< HEAD
 
     <main>
       <div class="contenido-producto ">
@@ -385,176 +322,3 @@
 
 
 </html>
-=======
-    <main>
-      <div class="contenido-producto container">
-        <div class="firts-nav-tienda2">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="../Paginas/Inicio.html">Inicio</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="../Paginas/tienda.html">Tienda</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Producto
-              </li>
-            </ol>
-          </nav>
-        </div>
-        <div class="row align-items-start">
-          <div class="col-md-6">
-            <img src="../Img/disco1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="col-md-6">
-            <div class="detalle-producto">
-              <h2 class="name-disco">Greatest Hits</h2>
-              <p class="code-disco">SKU: 364215375135191</p>
-              <h4 class="precio-disco">
-                Precio: <span id="precio-unitario">s/179.99</span>
-              </h4>
-              <div class="cantidad-producto">
-                <h3>Cantidad :</h3>
-                <div class="contador">
-                  <button onclick="actualizarCantidad(-1)" class="btn-contador">
-                    -
-                  </button>
-                  <span id="cantidad">1</span>
-                  <button onclick="actualizarCantidad(1)" class="btn-contador">
-                    +
-                  </button>
-                </div>
-              </div>
-              <button class="btn btn-primary btn-block mt-3" id="btn-carrito">
-                Agregar al carrito
-              </button>
-
-              <div class="accordion mt-4" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne">
-                      Descripcion Discografica
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <h6>
-                        El disco de vinilo "Greatest Hits" de Queen es una
-                        colección icónica que reúne los éxitos más grandes de la
-                        banda. Desde el poder de "Bohemian Rhapsody" hasta la
-                        energía de "We Will Rock You", este álbum es una joya
-                        imprescindible para cualquier fanático del rock.
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo">
-                      Informacion del producto
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <li>Título: Greatest Hits Artista: Queen</li>
-                      <li>Formato: Vinilo 12</li>
-                      <li>Lanzamiento: 1981</li>
-                      <li>
-                        Género: Rock Número de Discos: 1 Incluye: Hoja con
-                        letras de canciones Edición: Remasterizada
-                      </li>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree">
-                      Politica de Devolucion
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Puedes devolver este disco de vinilo dentro de los 30 días
-                      posteriores a la compra si presenta defectos de
-                      fabricación o daños en el embalaje. Para ser elegible para
-                      una devolución, el disco debe estar en su estado original
-                      y sin signos de uso. Los gastos de envío no son
-                      reembolsables.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
-  <footer class="pie-pagina">
-    <div class="grupo-1">
-      <div class="box">
-        <figure>
-          <a href="#">
-            <img src="./Img/logo_footer.jpeg" alt="logo" />
-          </a>
-        </figure>
-      </div>
-
-      <div class="box">
-        <h2>SOBRE NOSOTROS</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, quaerat?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, quaerat?
-        </p>
-      </div>
-
-      <div class="box" id="box-red-social">
-        <h2>SIGUENOS Y CONTACTANOS</h2>
-        <div class="red-social">
-          <a href="#" class="fa fa-facebook" id="icon-face"></a>
-          <a href="#" class="fa fa-instagram" id="icon-ig"></a>
-          <a href="#" class="fa-brands fa-x-twitter" id="icon-x"></a>
-          <a href="#" class="fa fa-whatsapp" id="icon-wsp"></a>
-        </div>
-      </div>
-    </div>
-    <div class="grupo-2">
-      <small
-        >&copy;2024 <b>RETROGROOVE</b> - Todos los Derechos Reservados</small
-      >
-    </div>
-  </footer>
-  <script src="./JS/reproductor_musica.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</html>
->>>>>>> 33282f758f2cb86144a9f747cb666a0e69c27198

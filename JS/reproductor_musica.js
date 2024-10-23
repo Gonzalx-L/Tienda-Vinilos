@@ -2,7 +2,7 @@
 
 const songs = [
   {
-    src: "../Musica/cancion_1.mp3",
+    src: "./Musica/cancion_1.mp3",
     image: "./Img/Cancion_1.jpeg",
     title: "Aire - Los Cafres",
   },
