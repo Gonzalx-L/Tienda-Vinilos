@@ -2,7 +2,6 @@ li {
   font-family: "Urbanist", sans-serif;
   font-size: large;
 }
-
 /* Estilos de la navbar */
 .navbar {
   background-color: black;
@@ -62,5 +61,36 @@ li {
 
   .navbar-brand {
     margin-left: 0;
+  }
+}
+
+/*Icono de cantidad carrito*/
+#car {
+  position: relative;
+}
+
+#car span {
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  top: 2px;
+  right: -4px;
+  font-size: 15px;
+}
+
+/* Ajuste para pantallas pequeñas cuando el navbar colapsa */
+@media (max-width: 992px) {
+  #car span {
+    top: 2px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    font-size: 12px; 
   }
 }

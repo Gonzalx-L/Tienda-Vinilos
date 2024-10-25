@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../Style/nav.css" />
   <link rel="stylesheet" href="../Style/footer.css" />
   <link rel="stylesheet" href="../Style/producto.css">
+  <link rel="stylesheet" href="../Style/carrito.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                 <a class="nav-link" href="../Index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Pages/tienda.html">Tienda</a>
+                <a class="nav-link" href="../Pages/tienda.html">Tienda</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="">Noticias</a>
@@ -50,8 +51,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" id="car" href="#" data-bs-toggle="modal" data-bs-target="#modalcar">
                   <i class="bi bi-cart3 bi-nav" title="Carrito de Compra"></i>
+                  <span>0</span>
                 </a>
               </li>
             </ul>
@@ -238,8 +240,10 @@
                 </div>
                 <!-- Add more swiper-slide divs here for additional cards -->
               </div>
-              <div class="swiper-button-next swiper-btn"><i class="fa-solid fa-chevron-right" style="display: flex; justify-content: center; align-items: center; padding-top: 30%;"></i></div>
-              <div class="swiper-button-prev swiper-btn"><i class="fa-solid fa-chevron-left"  style="display: flex; justify-content: center; align-items: center; padding-top: 30%;"></i></div>
+              <div class="swiper-button-next swiper-btn"><i class="fa-solid fa-chevron-right"
+                  style="display: flex; justify-content: center; align-items: center; padding-top: 30%;"></i></div>
+              <div class="swiper-button-prev swiper-btn"><i class="fa-solid fa-chevron-left"
+                  style="display: flex; justify-content: center; align-items: center; padding-top: 30%;"></i></div>
             </div>
           </div>
 
@@ -272,6 +276,26 @@
 
         </div>
       </div>
+      <!-- Modal del carrito-->
+      <div class="modal fade" id="modalcar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-custom">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Carrito de Compra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Aquí puedes colocar el contenido del carrito -->
+              <p>Aquí irán los productos del carrito</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Continuar Compra</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
 
     <!-- Pie de Pagina -->

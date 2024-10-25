@@ -1,0 +1,18 @@
+/*Modal */
+.modal-dialog-custom {
+    height: 100%;
+    width: 10000px;
+    margin: 0;
+    position: fixed;
+    right: 0;
+}
+.modal-content {
+    height: 100%;
+}
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.modal-footer button{
+    width: 180px;
+}
