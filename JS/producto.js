@@ -26,3 +26,4 @@ function activateButton(button) {
 document.addEventListener('DOMContentLoaded', function() {
     activateButton('A');
 });
+

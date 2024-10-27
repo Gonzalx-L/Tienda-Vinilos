@@ -14,8 +14,6 @@
   <script src="https://kit.fontawesome.com/1eaec87770.js" crossorigin="anonymous"></script>
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-
   <!--Link css-->
   <link rel="stylesheet" href="../Style/nav.css" />
   <link rel="stylesheet" href="../Style/footer.css" />
@@ -51,9 +49,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="car" href="#" data-bs-toggle="modal" data-bs-target="#modalcar">
+                <a class="nav-link" id="car" onclick="CarritoAD()">
                   <i class="bi bi-cart3 bi-nav" title="Carrito de Compra"></i>
-                  <span>0</span>
+                  <span id="cart-count">0</span>
                 </a>
               </li>
             </ul>
@@ -66,14 +64,14 @@
       <div class="contenido-producto ">
         <div class="row align-items-start">
           <div class="col-md-5 imgvin">
-            <img src="../Img/_ingreso_1.jpg" alt="" class="img-fluid" id="img1" />
+            <img src="../Img/_ingreso_2.jpg" alt="" class="img-fluid" id="img1">
           </div>
           <div class="col-md-7">
             <div class="detalle-producto">
-              <h1 class="name-disco">Greatest Hits</h1>
+              <h1 class="name-disco">Antony</h1>
               <h4 class="code-disco">COD: C012</h4>
               <h2 class="precio-disco">
-                Precio: <span id="precio-unitario">S/179.99</span>
+                Precio: <span class="precio-unitario">S/179.99</span>
               </h2>
               <div class="atributos">
                 <p id="descripcion">hooa hola hola hoa hola hola hola hola hola hols fnsj ionf jnsf unf</p>
@@ -89,7 +87,7 @@
               <div class="cantidad-producto">
                 <div class="control-cantidad">
                   <button class="btn-cantidad" onclick="bajar()">-</button>
-                  <input type="text" id="cantidad" value="1" readonly>
+                  <input type="text" id="cantidad" class="cantidad" value="1" readonly>
                   <button class="btn-cantidad" onclick="subir()">+</button>
                 </div>
                 <button class="add-cart-btn">AÑADIR AL CARRITO</button>
@@ -276,22 +274,41 @@
 
         </div>
       </div>
-      <!-- Modal del carrito-->
-      <div class="modal fade" id="modalcar" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-custom">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Carrito de Compra</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!--Carrito-->
+      <div class="carrito" id="carrito">
+        <div class="header-carrito">
+          <h2>Tu Carrito</h2>
+          <i class="fa-solid fa-x" onclick="ocultarCarrito()"></i>
+        </div>
+
+        <div class="carrito-items">
+
+          <!-- <div class="carrito-item">
+            <img src="../Img/_ingreso_1.jpg" alt="">
+            <div class="carrito-item-detalles">
+              <span class="carrito-item-titulo">Titulo del vinilo</span>
+              <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+              </div>
+              <span class="carrito-item-precio">S/10.00</span>
             </div>
-            <div class="modal-body">
-              <p>Aquí irán los productos del carrito</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success">Continuar Compra</button>
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+            <button class="btn-eliminar">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div> -->
+
+        </div>
+
+        <div class="carrito-total">
+          <div class="fila">
+            <strong>Tu Total</strong>
+            <span class="carrito-precio-total">
+              S/0.00
+            </span>
           </div>
+          <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
         </div>
       </div>
 
@@ -340,6 +357,7 @@
 
 <!--Link JS-->
 <script src="../JS/producto.js"></script>
+<script src="../JS/carrito.js" async></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
